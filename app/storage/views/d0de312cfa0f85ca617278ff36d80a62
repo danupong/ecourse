@@ -1,0 +1,125 @@
+<?php $__env->startSection('content'); ?>
+
+
+<div class="box box-warning">
+    <div class="box-header">
+        <h3 class="box-title"><?php echo $_layout_title; ?></h3>
+        <div class="pull-right box-tools">
+            <button title="" data-toggle="tooltip" data-widget="collapse" class="btn btn-default btn-sm" data-original-title="Collapse"><i class="fa fa-minus"></i></button>
+        </div><!-- /. tools -->
+    </div>
+    <div class="box-body">
+
+        <?php if(isset($success)): ?>
+        <div class="alert alert-success alert-dismissable">
+        <i class="fa fa-check"></i> <p><?php echo $success; ?></p>
+        </div>
+        <?php endif; ?>
+        <?php if(count($errors->all())>0 || isset($message)): ?>
+        <div class="alert alert-danger alert-dismissable">
+        <i class="fa fa-ban"></i>
+        <?php if(isset($message)): ?>
+        <p><?php echo $message; ?></p>
+        <?php endif; ?>
+        <?php foreach($errors->all('<p>:message</p>') as $message): ?>
+        <?php echo $message; ?>
+
+        <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
+
+
+        <form name="data" method="post" action=""  id="form_submit" enctype="multipart/form-data" class="form-horizontal">
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Instructor</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="name" name="name" disabled placeholder="Instructor" value="<?php echo $instructor; ?>">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Category</label>
+            <div class="col-sm-6">
+                <select class="form-control" id="cate_id" name="cate_id">
+                  <option value="">- Select Category -</option>
+                  <?php foreach($cate as $val): ?>
+                  <option value="<?php echo $val->id; ?>" <?php echo isset($data['cate_id']) && $data['cate_id']==$val->id ? 'selected' :  ''; ?> ><?php echo $val->name; ?></option>
+                  <?php endforeach; ?>
+                </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Subject</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" value="<?php echo isset($data['subject']) ? $data['subject'] : Input::old('subject'); ?>">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Description</label>
+            <div class="col-sm-6">
+                <textarea class="form-control" id="description" name="description"><?php echo isset($data['description']) ? $data['description'] : Input::old('description'); ?></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Membership</label>
+            <div class="col-sm-1">
+                <select class="form-control" id="num_std" name="num_std">
+                  <?php for($i = 1; $i < 51; $i++): ?>
+                  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                  <?php endfor; ?>
+                  
+                </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Date</label>
+            <div class="col-sm-6">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right" id="date" name="date" value="<?php echo isset($data['date']) ? $data['date'] : Input::old('date'); ?>">
+                </div>
+            </div>
+          </div>
+          
+
+         <br clear="all"/>
+         <div style="text-align: right;" class="box-footer">
+          <?php if(isset($data['id']) && $data['id']>0): ?>
+            <input type="hidden" name="id" id="id" value="<?php echo $data['id']; ?>">
+          <?php endif; ?>
+            <button type="button" id="post_data" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> บันทึก</button> 
+            <button type="reset" class="btn btn-danger" ><i class="glyphicon glyphicon-refresh"></i> ยกเลิก</button>
+        </div>
+        </form>
+    <br clear="all">
+</div>
+</div>
+
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('script'); ?>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+  $('#date').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'DD/MM/YYYY hh:mm:ss'});
+
+  $('#post_data').click(function() {
+    if(confirm('คุณแน่ใจว่าตรวจสอบข้อมูลเรียบร้อยแล้ว?')) $('#form_submit').submit();
+    return false;
+    
+  });
+});
+
+</script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make($_layout, array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

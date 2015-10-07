@@ -1,0 +1,52 @@
+<?php $__env->startSection('content'); ?>
+
+<div class="row login-box">
+
+<?php if(count($errors->all())>0 || isset($message)): ?>
+<div class="alert alert-danger alert-dismissable">
+<i class="fa fa-ban"></i>
+<?php if(isset($message)): ?>
+<p><?php echo $message; ?></p>
+<?php endif; ?>
+<?php foreach($errors->all('<p>:message</p>') as $message): ?>
+<?php echo $message; ?>
+
+<?php endforeach; ?>
+</div>
+<?php endif; ?>
+
+<!-- form start -->
+<form role="form" method="post">
+    <div class="box-body">
+        <div class="form-group">
+            <label for="InputAccount1">Account</label>
+            <input type="text" class="form-control" id="InputAccount1" placeholder="Account" name="account">
+        </div>
+        <div class="form-group">
+            <label for="InputPassword1">Password</label>
+            <input type="password" class="form-control" id="InputPassword1" placeholder="Password" name="password">
+        </div>
+    </div><!-- /.box-body -->
+
+    <div class="box-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+</div>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('style'); ?>
+<style type="text/css">
+div.login-box{
+	margin: 10% auto;
+	width: 500px;
+}
+
+</style>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('script'); ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make($_layout, array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

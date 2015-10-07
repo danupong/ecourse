@@ -1,0 +1,41 @@
+@charset 'utf-8';
+
+/* 탭메뉴 */
+.tab_notice li a {background:url('../images/tab.gif') no-repeat;}
+.tab_notice li a.on {background:#fff url('../images/tab_on.gif') no-repeat;}
+.tab_notice li.tab1 a {width:43px;background-position:19px 0;}
+.tab_notice li.tab2 a {width:76px;background-position:19px -30px;}
+
+.tab_gmroom li a {background:url('../images/tab.gif') no-repeat;}
+.tab_gmroom li a.on {background:#fff url('../images/tab_on.gif') no-repeat;}
+.tab_gmroom li.tab1 a {width:23px;background-position:19px 0;}
+.tab_gmroom li.tab2 a {width:43px;background-position:19px -30px;}
+.tab_gmroom li.tab3 a {width:53px;background-position:19px -60px;}
+.tab_gmroom li.tab4 a {width:40px;background-position:19px -90px;}
+
+.bbs_l2online table .notice td {background-color:#fffced;}
+.bbs_l2online table .notice td.subject {font-weight:bold;}
+.bbs_l2online table .notice td.writer {padding-left:0;text-align:center;}
+
+.bbs_l2online table td.subject {vertical-align:top;}
+.bbs_l2online table p.subject {height:23px; margin:0; padding:10px 0 0 0; font-size:14px; font-weight:bold; letter-spacing:-1px;}
+.bbs_l2online table p.desc {height:30px; margin:0 0 13px 0; padding:0; overflow:hidden;}
+
+/* 베스트글 */
+.wrap_image_best {clear:both;height:209px;padding:26px 13px 0;background:url('../images/best_bg_v2.gif') no-repeat;}
+.wrap_image_best h2 {display:none;}
+.wrap_image_best .ul_image {border:none;}
+.wrap_image_best .ul_image li {border:none; width: 200px; margin:0px;}
+.wrap_image_best .ul_image li.none_article,
+.ul_image li.none_article {padding:70px 0;text-align:center;font-weight:bold;}
+.wrap_image_best .bbs_best {margin:0px; padding:0px; width:100%; overflow:hidden;}
+.wrap_image_best .bbs_best li {list-style:none; float:left; width:200px; padding:0 12px;}
+.wrap_image_best .bbs_best dl {position:relative; width:200px; margin:0; padding:0;}
+.wrap_image_best .bbs_best dt {margin:0; padding-top:128px; line-height:18px; word-wrap:break-word; word-break:break-all; overflow:hidden; color:#b38500;}
+.wrap_image_best .bbs_best dt a {font-weight:bold; letter-spacing:-1px;}
+.wrap_image_best .bbs_best dt .reply {color:#a96303;} 
+.wrap_image_best .bbs_best dd {margin:0px; width:200px;cursor:pointer; }
+.wrap_image_best .bbs_best dd.thumb {position:absolute; top:0px; left:0px;}
+.wrap_image_best .bbs_best dd.thumb img {width:200px; height:120px; border:1px solid #81624f;}
+.wrap_image_best .bbs_best dd.info {padding-top:2px; font-size:11px;}
+.wrap_image_best .bbs_best dd.info a {color:#446a91}

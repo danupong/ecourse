@@ -1,0 +1,29 @@
+<div id="mainBannerWrap" class="mainBannerWrap">
+	<div class="banner">
+		<ul id="rollBanner">
+<li><a href="/notice/content/6"><img src="/data/07.png" alt=""/></a></li>
+<li><a href="/notice/content/5"><img src="/data/06.png" alt=""/></a></li>
+<li><a href="/notice/content/4"><img src="/data/05.png" alt=""/></a></li>
+
+<li><a href="#"><img src="/data/03.png" alt=""/></a></li>
+		</ul>
+	</div>
+	<div id="rollBanner_pager" class="pager">
+		<span class="paging"></span>
+		<button type="button" class="prevPage">prev</button>
+		<button type="button" class="nextPage">next</button>
+	</div>
+</div>
+<!--//main top Banner -->
+
+<script type="text/javascript">
+//<![CDATA[
+	var subBanner = new rollingData({
+		banner: '#rollBanner',
+		bannerFind: 'li',
+		page: '#rollBanner_pager',
+		fn: ['fadeInOut'],   //fadeInOut, basic
+		time: 8000
+	});
+//]]>
+</script>

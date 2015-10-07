@@ -1,0 +1,30 @@
+
+<a href="/home" class="logo">Lineage II</a>
+
+<ul id="naviHTML">
+	<li class="menu1"><a href="#" class="navi1deps">คู่มือ</a>
+		<ul class="navi2deps sub1">
+			<li class="sub1_1"><a target="_blank" href="http://forum.l2memory.com/index.php?/6-%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B9%80%E0%B8%84%E0%B8%A7%E0%B8%AA/">เควสเปลี่ยนอาชีพ</a></li>
+			<li class="sub1_2"><a href="#">เควสซัพคลาส</a></li>
+			<li class="sub1_3"><a href="#">เควสเปลี่ยนผู้ทรงเกียรติ</a></li>
+		</ul>
+	</li>
+	<li class="menu2"><a href="#" class="navi1deps">ข้อมูลเกม</a>
+		<ul class="navi2deps sub2">
+			<li class="sub2_1"><a href="/game/castle">ปราสาท</a></li>
+			<li class="sub2_2"><a href="/game/agit">ค่าย</a></li>
+			<li class="sub2_3"><a href="/game/seven">ตราผนึกทั้ง 7</a></li>
+		</ul>
+	</li>
+	<li class="menu3"><a href="#" class="navi1deps">จัดอันคับ</a>
+		<ul class="navi2deps sub3">
+			<li class="sub3_1"><a href="#">โอลิมเพียด</a></li>
+			<li class="sub3_2"><a href="#">วีรบุรุษ</a></li>
+		</ul>
+	</li>
+	<li class="menu4"><a href="http://forum.l2memory.com/" class="navi1deps">เว็บบอร์ด</a></li>
+	<li class="menu5"><a href="/download/client/" class="navi1deps">ดาวน์โหลด</a></li>
+</ul>
+<a href="/exchange/truemoney" class="changelive">บริจาค</a>
+
+		

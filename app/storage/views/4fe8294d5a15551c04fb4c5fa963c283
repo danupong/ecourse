@@ -1,0 +1,11 @@
+<?php $__env->startSection('body'); ?>
+
+<div class="wrapper">
+    <?php echo $__env->yieldContent('content'); ?>
+
+</div>
+
+<?php $__env->stopSection(); ?>
+
+
+<?php echo $__env->make('layout.inc.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

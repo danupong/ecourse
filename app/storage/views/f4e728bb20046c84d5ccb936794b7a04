@@ -1,0 +1,33 @@
+<?php $__env->startSection('body'); ?>
+
+<?php echo $__env->make('layout.inc.top', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<div class="wrapper row-offcanvas row-offcanvas-left">
+    <aside class="left-side sidebar-offcanvas">
+        <?php echo $__env->make('layout.inc.left', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </aside>
+    <aside class="right-side">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                <?php echo $_layout_title; ?>
+
+                <small><?php echo $_layout_desc; ?></small>
+            </h1>
+            <ol class="breadcrumb">
+                <?php if($_breadcrumb): ?> <?php foreach($_breadcrumb as $key=>$value): ?>
+                <li><a href="<?php echo $value; ?>"><?php if($key=='Login'): ?><i class="fa fa-key"></i><?php endif; ?> <?php echo $key; ?></a></li>
+                <?php endforeach; ?> <?php endif; ?>
+                <!--<li class="active">Dashboard</li>-->
+            </ol>
+        </section>
+        <section class="content">
+            <?php echo $__env->yieldContent('content'); ?>
+        </section>
+    </aside>
+
+</div>
+<?php $__env->stopSection(); ?>
+
+
+<?php echo $__env->make('layout.inc.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

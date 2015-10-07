@@ -1,0 +1,107 @@
+@extends($_layout)
+
+
+@section('content')
+
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">รายการ{{$_layout_desc}}</h3>
+        <div class="pull-right box-tools">
+            <button title="" data-toggle="tooltip" data-widget="collapse" class="btn btn-default btn-sm" data-original-title="Collapse"><i class="fa fa-minus"></i></button>
+        </div><!-- /. tools -->
+    </div>
+
+    <div class="box-body table-responsive" style="min-height:400px;">
+        <div class="row form-group">
+            <form id="form_search" name="data" method="post" action="" >
+                <div class="col-sm-3">
+                    <input type="text" name="instructor" placeholder="Instructor" class="form-control">
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" name="subject" placeholder="Subject" class="form-control">
+                </div>
+                <div class="col-sm-2">
+                    <div class='input-group date' id='btn_date'>
+                        <input type='text' name="search_date" class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <a id="btn_search" class="btn btn-info" href="#"><i class="fa fa-search"></i> Search</a>
+                </div>
+            </form>
+        </div>
+        @if(isset($success))
+        <div class="alert alert-success alert-dismissable">
+        <i class="fa fa-check"></i> <p>{{$success}}</p>
+        </div>
+        @endif
+        <table id="content_list" class="table table-bordered table-striped">
+            <thead>
+                <th width="5%">id</th>
+                <th width="10%">Category</th>
+                <th width="15%">Instructor</th>
+				<th width="15%">Subject</th>
+                <th>Description</th>
+                <th width="17%">Date</th>
+                <th width="5%">Membership</th>
+                <th width="6%"></th>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+    </div><!-- /.box-body -->
+</div><!-- /.box -->
+
+
+
+@stop
+
+
+@section('script')
+<script type="text/javascript">
+
+function calldata(param){
+    $.post('/service/courselist', param,function(d) {
+        $('#content_list > tbody').html('');
+        if (d.status == 'ok') {
+            var obj = d.data;
+            var html = '';
+            $.each(obj.data, function(index, val){
+                html +='<tr>';
+                html +='<td>'+val.id+'</td>';
+                html +='<td>'+val.cate_name+'</td>';
+                html +='<td>'+val.name+'</td>';
+                html +='<td>'+val.subject+'</td>';
+                html +='<td>'+val.description+'</td>';
+                html +='<td>'+val.date+'</td>';
+                html +='<td>'+val.num_std+'</td>';
+                html +='<td>'+val.etc+'</td>';
+                html +='</tr>';
+            });
+
+            $('#content_list > tbody').html(html);
+        }
+    }, 'json');
+}
+
+$(document).ready(function(){
+
+    calldata({});
+    $('#btn_date').datetimepicker({format: 'YYYY-MM-DD hh:mm:ss'});
+
+    $('#btn_search').click(function(){
+        calldata($('#form_search').serializeArray());
+        return false;
+    });
+
+});
+
+
+
+
+</script>
+@stop

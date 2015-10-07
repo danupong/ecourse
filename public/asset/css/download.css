@@ -1,0 +1,73 @@
+@charset 'utf-8';
+
+.wrap_client h2 {margin:0;padding:0 0 7px 14px;}
+.wrap_client p {margin:0;padding:0;}
+.wrap_client .wrap_down {margin:0 0 40px 0;color:#666;}
+.wrap_client .wrap_down .ver {color:#333;}
+.wrap_client .client_down {padding:6px 0 18px 20px;font-size:11px;background-color:#e5e5e2;}
+.wrap_client .client_down .btn {margin:0 0 0 -3px;padding:0 0 11px;}
+.wrap_client .client_down .btn img {border:2px solid #ababa8;}
+.wrap_client .client_down .ver {padding:0 0 6px;}
+.wrap_client .testserver_down {margin-bottom:17px;overflow:hidden;line-height:1.4;}
+.wrap_client .testserver_down .btn {float:left;margin:0 10px 0 0;}
+.wrap_client .testserver_down .btn img {border:1px solid #758499;}
+.wrap_client .testserver_down .ver em {color:#cf4834;font-style:normal;}
+.wrap_client .directx_down {overflow:hidden;line-height:1.4;}
+.wrap_client .directx_down .btn {float:left;margin:0 10px 0 0;}
+.wrap_client .directx_down .btn img {border:1px solid #82837d;}
+.wrap_client .directx_down .ver {font-weight:bold; margin-top: 12px;}
+.wrap_client .vga_down {width:682px;height:130px;padding:16px 0 0 17px;background:#f3f2ee;border:1px solid #e0d9cd;}
+.wrap_client .vga_down dl {width:669px;margin:0;overflow:hidden;}
+.wrap_client .vga_down .nvidia {margin:0 0 15px 0;padding:0 0 16px 0;border-bottom:1px solid #e6e0d7;}
+.wrap_client .vga_down dl dt {float:left;width:511px;}
+.wrap_client .vga_down dl dt img {float:left;border:1px solid #444;}
+.wrap_client .vga_down dl dt span {float:right;width:440px;margin:5px 0 0 0;line-height:17px;}
+.wrap_client .vga_down dl dt span strong {color:#333;}
+.wrap_client .vga_down dl dt span a {color:#7b2e00;text-decoration:underline;}
+.wrap_client .vga_down dl dd {float:left;display:inline;margin:0 0 0 3px;line-height:1em;}
+.wrap_client .wrap_testserver_setting {margin:0 0 23px 0;padding:16px 13px 6px 13px;color:#000;border:5px solid #e5e5e3;}
+.wrap_client .wrap_testserver_setting dt {margin:0;padding:0 0 10px 0;font-weight:bold;}
+.wrap_client .wrap_testserver_setting dd {margin:0;padding:0 0 5px 7px;line-height:1.3;background:url('../images/bul1.gif') no-repeat 0 5px;}
+.wrap_client .wrap_testserver_setting dd strong a {color:#a0410d;}
+.wrap_client .wrap_testserver_setting em {color:#cf4834;font-style:normal;font-weight:bold;letter-spacing:-1px;}
+.wrap_client .wrap_testserver_setting a.em {color:#cf4834;font-weight:bold;letter-spacing:-1px;}
+.wrap_client .client_txt {padding:5px 13px;}
+.wrap_client .tb_ost {width:100%;margin:0 0 40px 0;font-size:11px;line-height:1.4;background-color:#d5d5d5;}
+.wrap_client .tb_ost caption {padding:0 0 8px 13px;font-size:12px;text-align:left;}
+.wrap_client .tb_ost thead th {padding:10px 0 7px 0;background-color:#f4f1e2;}
+.wrap_client .tb_ost tbody th {padding:6px 0 6px 20px;text-align:left;font-weight:normal;background-color:#fbf9f5;}
+.wrap_client .tb_ost tbody td {padding:6px 0 6px 15px;background-color:#fff;}
+.wrap_client .systemcheck_box {position:relative;padding:13px 15px;margin:0 0 3px 0;font-size:11px;line-height:1.5;border:1px solid #d5d5d5;background-color:#ededeb;}
+.wrap_client .systemcheck_box .btn {position:absolute;right:31px;top:16px;}
+.wrap_client h2.gard {margin-top:23px;}
+.wrap_client dl.gardbox {width:664px;border:7px solid #e5e5e2;margin:0;padding:12px 10px 12px 12px;color:#000;}
+.wrap_client dl.gardbox dt {font-weight:bold;}
+.wrap_client dl.gardbox dd {margin:0;padding:10px 0 0 0 ;overflow:hidden;}
+.wrap_client dl.gardbox dd p {float:left;width:290px;margin:0;padding:0;}
+.wrap_client dl.gardbox dd ol.gard {float:right;width:337px;margin:0;padding:0;}
+.wrap_client dl.gardbox dd ol.gard li {margin-left:23px;padding:8px 0 0 0;line-height:150%;word-spacing:-1px;}
+.wrap_client dl.gardbox dd ol.gard li strong {color:#b38600;}
+.wrap_client dl.gardbox dd ol.gard li a {text-decoration:underline;}
+
+/* 2013-06 클라이언트 다운로드 개선 */
+.wrap_client .fullClientWrap {clear:both; margin:0 0 40px 0;padding-top:29px;border-top:2px solid #6f2d0f;}
+.wrap_client .testClientWrap {clear:both; margin:0 0 25px 0;}
+.wrap_client .downloadWrap {position:relative; height:130px; padding:0 15px; background:url('../images/bg_full_client_140521.gif') repeat-x;}
+.wrap_client .downloadWrap .agree_check {height:26px; padding:15px 0 0 0; font-weight:bold;}
+.wrap_client .downloadWrap .agree_check input {vertical-align:top;}
+.wrap_client .downloadWrap .btn_download {cursor:pointer; width:316px; height:70px; margin:0 0 37px 0; border:0 none; background:url('../images/btn_full_client_140618.gif') no-repeat;}
+.wrap_client .downloadWrap .btn_download_bit {cursor:pointer; width:316px; height:70px; margin:0 0 37px 0; border:0 none; background:url('../images/btn_full_bit.gif') no-repeat;}
+.wrap_client .downloadWrap .btn_download_c { cursor:pointer;}
+.wrap_client .downloadWrap .info_client {position:absolute; top:42px; left:352px; font-size:11px; line-height:17px; color:#666;}
+.wrap_client .downloadWrap .verInfo {clear:both; padding:0 0 0 0; text-align:center; color:#555;}
+.wrap_client .downloadWrap .verInfo p {margin:0; padding:0 0 5px 0; text-align:center; font-size:11px;}
+.wrap_client .downloadWrap .verInfo p.ver {color:#4d4946;}
+.wrap_client .downloadWrap .verInfo p.ver strong {font-size:12px;}
+.wrap_client .downloadWrap .verInfo p.em { color: #fff;}
+.wrap_client .txtWrap {clear:both; padding:0 0 4px 0; line-height:17px;}
+.wrap_client .testClientWrap .downloadWrap {background-image:url('../images/bg_test_client.gif');}
+.wrap_client .testClientWrap .downloadWrap .btn_download {background-image:url('../images/btn_test_client.gif');}
+.wrap_client .testClientWrap .downloadWrap .info_client {top:33px;}
+.wrap_client .testClientWrap .downloadWrap .verInfo {color:#555}
+.wrap_client .testClientWrap .downloadWrap .verInfo p.ver {color:#6b4d32;}
+.wrap_client .testClientWrap .txtWrap {padding-left:13px;}

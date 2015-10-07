@@ -1,0 +1,18 @@
+{
+   "require": {
+         "iorme/simplecaptcha": "dev-master",
+         "wicochandra/captcha": "1.*",
+         "guzzlehttp/guzzle": "~4.0",
+         "chumper/datatable": "2.*",
+      "davejamesmiller/laravel-breadcrumbs": "~2.3",
+      "intervention/image": "~2.1"
+   },
+   "autoload": {
+        "classmap": [
+            "app/commands",
+            "app/controllers",
+            "app/models",
+            "app/classes"
+        ]
+    }
+}
