@@ -25,3 +25,43 @@ Documentation for the entire framework can be found on the [Laravel website](htt
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 ### วิธีการรันโปรแกรม
+
+** ตัวอย่างการตั้งค่าบน apache บน Windows
+
+1. เพิ่ม code ด้านล่างนี้ลงไปในไฟล์ C:\xampp\apache\conf\extra\httpd-vhosts.conf
+```
+<VirtualHost *:80>
+    DocumentRoot C:\xampp\htdocs\ecourse\public
+    ServerName ecourse.club
+    ServerAlias *.ecourse.club
+</VirtualHost>
+```
+
+2. ตรวจดูที่ไฟล์ C:\xampp\apache\conf\httpd.conf ว่ามีการเรียกใช้ conf/extra/httpd-vhosts.conf หรือไม่
+```
+# Virtual hosts
+Include conf/extra/httpd-vhosts.conf
+```
+
+3. Restart Apache
+
+4. เพิ่ม ( 127.0.0.1 ecourse.club ) ลงไปในไฟล์ C:\Windows\System32\drivers\etc\hosts
+
+5. เปิดเว็บเบราเซอร์ ใส่โดเมน ecourse.club
+
+** ตั้งค่า Database
+1. Excute file \ecourse\ecourse.sql ลงฐานข้อมูล
+
+2. ตั้งค่าไฟล์ Config \ecourse\app\config\database.php
+```
+'mysql' => array(
+			'driver'    => 'mysql',
+			'host'      => '127.0.0.1',
+			'database'  => 'ecourse',
+			'username'  => 'root',
+			'password'  => '1234',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
+```
