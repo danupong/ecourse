@@ -18,12 +18,14 @@
         @endif
         <table id="content_list" class="table table-bordered table-striped">
             <thead>
-                <th width="8%">id</th>
-                <th>Username</th>
-				<th width="15%">Firstname</th>
-                <th width="15%">Lastname</th>
-                <th width="10%">Nickname</th>
-                <th width="10%">Type</th>
+                <tr>
+                    <th width="8%">id</th>
+                    <th>Username</th>
+    				<th width="15%">Firstname</th>
+                    <th width="15%">Lastname</th>
+                    <th width="10%">Nickname</th>
+                    <th width="10%">Type</th>
+                </tr>
             </thead>
             <tbody>
                

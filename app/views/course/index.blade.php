@@ -40,14 +40,16 @@
         @endif
         <table id="content_list" class="table table-bordered table-striped">
             <thead>
-                <th width="5%">id</th>
-                <th width="10%">Category</th>
-                <th width="15%">Instructor</th>
-				<th width="15%">Subject</th>
-                <th>Description</th>
-                <th width="17%">Date</th>
-                <th width="5%">Membership</th>
-                <th width="6%"></th>
+                <tr>
+                    <th width="5%">id</th>
+                    <th width="10%">Category</th>
+                    <th width="15%">Instructor</th>
+    				<th width="15%">Subject</th>
+                    <th>Description</th>
+                    <th width="17%">Date</th>
+                    <th width="5%">Membership</th>
+                    <th width="6%"></th>
+                </tr>
             </thead>
             <tbody>
                
