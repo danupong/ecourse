@@ -71,7 +71,7 @@
             <div class="col-sm-1">
                 <select class="form-control" id="num_std" name="num_std">
                   @for ($i = 1; $i < 51; $i++)
-                  <option value="{{$i}}">{{$i}}</option>
+                  <option value="{{$i}}" {{isset($data['num_std']) && $data['num_std']==$i ? 'selected' :  ''}}>{{$i}}</option>
                   @endfor
                   
                 </select>
